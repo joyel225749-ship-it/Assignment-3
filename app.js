@@ -12,12 +12,9 @@ const path=require('path');
 app.use(express.static(path.join(__dirname+'/dist/FrontEnd')));
 // Task2: create mongoDB connection 
 
-const mongoURI = 'mongodb+srv://<username>:<password>@cluster0.mongodb.net/employeeDB?retryWrites=true&w=majority';
+const mongoURI = 'mongodb+srv://joyeljoshy:joyel%40123@cluster0.pyexh1k.mongodb.net/employeeDB?retryWrites=true&w=majority';
 
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+mongoose.connect(mongoURI)
 .then(() => console.log('MongoDB connected successfully'))
 .catch((err) => console.error('MongoDB connection error:', err));
 
